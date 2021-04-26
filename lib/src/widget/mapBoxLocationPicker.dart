@@ -355,7 +355,7 @@ class _MapBoxLocationPickerState extends State<MapBoxLocationPicker>
                           reverse: false,
                           child: Text(
                             _desc == null ? widget.awaitingForLocation : _desc,
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(fontSize: 20, color: Colors.black),
                             textAlign: TextAlign.start,
                           ),
                         )))),
@@ -411,13 +411,19 @@ class _MapBoxLocationPickerState extends State<MapBoxLocationPicker>
           place.length < 45
               ? "$place"
               : "${place.replaceRange(45, place.length, "")} ...",
-          style: TextStyle(fontSize: MediaQuery.of(context).size.width * 0.04),
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: MediaQuery.of(context).size.width * 0.04),
           maxLines: 1,
         ),
         subtitle: Text(
           fullName,
           overflow: TextOverflow.ellipsis,
-          style: TextStyle(fontSize: MediaQuery.of(context).size.width * 0.03),
+          
+          style: TextStyle(
+            color: Colors.black,
+
+            fontSize: MediaQuery.of(context).size.width * 0.03),
           maxLines: 1,
         ),
         contentPadding: EdgeInsets.symmetric(

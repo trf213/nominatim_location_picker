@@ -16,7 +16,7 @@ class MapBoxLocationPicker extends StatefulWidget {
     @required this.apiKey,
     this.onSelected,
     // this.onSearch,
-    this.searchHint = 'Search',
+    this.searchHint = 'Search For A Location',
     this.language = 'en',
     this.location,
     this.limit = 5,
@@ -261,7 +261,7 @@ class _MapBoxLocationPickerState extends State<MapBoxLocationPicker>
       leading: IconButton(
         icon: Icon(
           Icons.arrow_back_ios,
-          color: Colors.black87,
+          color: Theme.of(context).iconTheme.color,
         ),
         onPressed: () {
           Navigator.of(context).pop();

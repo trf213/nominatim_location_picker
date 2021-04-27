@@ -9,7 +9,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 
 class NominatimLocationPicker extends StatefulWidget {
   NominatimLocationPicker({
-    this.searchHint = 'Search',
+    this.searchHint = 'Search For Location',
     this.awaitingForLocation = "Awaiting for you current location",
     this.customMarkerIcon,
     this.customMapLayer,

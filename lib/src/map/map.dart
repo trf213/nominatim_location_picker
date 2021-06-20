@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:latlong/latlong.dart';
+
+import 'package:latlong2/latlong.dart';
 
 class MapPage extends StatefulWidget {
   MapPage({
@@ -38,7 +39,8 @@ class _MapPageState extends State<MapPage> {
                     urlTemplate:
                         'https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png',
                     subdomains: ['a', 'b', 'c'],
-                    tileProvider: CachedNetworkTileProvider())
+                    tileProvider: NetworkTileProvider()
+                    )
                 : widget.customMapLayer
             : widget.customMapLayer == null
                 ? new TileLayerOptions(
